@@ -14,6 +14,7 @@ namespace QueuingForm
 {
     public partial class CashierWindowQueueForm : Form
     {
+        public int num;
         public CashierWindowQueueForm()
         {
             InitializeComponent();
@@ -35,11 +36,19 @@ namespace QueuingForm
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (CashierClass.CashierQueue.Count > 0) {
-                MessageBox.Show(CashierClass.CashierQueue.Peek() + " Done serving!");
+            if (CashierClass.CashierQueue.Count > 0)
+            {
+               
+               // num = (int)Convert.ToInt64(CashierClass.CashierQueue.Peek());
                 CashierClass.CashierQueue.Dequeue();
             }
-            else { MessageBox.Show("All done!"); }
+            else
+            {
+                MessageBox.Show("All done!");
+
+            }
+
+
 
         }
 

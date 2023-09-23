@@ -14,11 +14,13 @@ namespace QueuingForm
     {
         private CashierClass cashier;
         CashierWindowQueueForm cashierWindowQueueForm = new CashierWindowQueueForm();
+        servingQueue servingQueue = new servingQueue();
         public QueuingForm()
         {
             InitializeComponent();
             cashier = new CashierClass();
             cashierWindowQueueForm.Show();
+            servingQueue.Show();
 
         }
 
